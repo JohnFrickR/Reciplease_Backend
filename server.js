@@ -11,6 +11,6 @@ const app = express()
 const cors = require('cors')
 
 // Middleware
-app.use(cors()) // This will prevent any errors with cors and let us use origins easily.
+app.use(cors()) // This will prevent any errors with cors and let us use origins easily
 app.use(express.urlencoded({extended:true})) // allow us to get req.body
 app.use(express.json()) // parse json, which is important for getting data
