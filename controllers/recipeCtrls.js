@@ -17,12 +17,12 @@ const getRecipe = (req, res) => {
   }
 
 // Show
-// show route for the SPECIFIC fund
+// show route for the SPECIFIC recipe
 const showRecipe = (req,res) =>{
     db.Recipe.findById(req.params.id)
     .then((foundRecipe)=>{
         if(!foundRecipe){
-            res.status(404).json({message: 'cannot find the Fund'})
+            res.status(404).json({message: 'cannot find the Recipe'})
         } else {
             res.status(200).json({data: foundRecipe})
         }
@@ -30,7 +30,7 @@ const showRecipe = (req,res) =>{
 }
 
 // Create
-// This will let us create a new fund
+// This will let us create a new recipe
 const createRecipe = (req,res) =>{
     db.Recipe.create(req.body)
     .then((createdRecipe)=>{
@@ -43,7 +43,7 @@ const createRecipe = (req,res) =>{
 }
 
 // Update
-// This will let us update a fund
+// This will let us update a recipe
 const updateRecipe = (req, res) =>{
     db.Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then((updatedRecipe) => {
@@ -56,7 +56,7 @@ const updateRecipe = (req, res) =>{
 }
 
 // Delete
-// this will let us delete the fund
+// this will let us delete the recipe
 const deleteRecipe = (req,res) => {
     db.Recipe.findByIdAndDelete(req.params.id)
     .then((deletedRecipe) => {
