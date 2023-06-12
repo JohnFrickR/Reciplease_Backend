@@ -9,7 +9,7 @@ const RecipeSchema = new mongoose.Schema({
     description: String,
     rating: {type: Number, min: 1, max: 5},
     tags: {type: [String]},
-    directions: String,
+    directions: {type: [String]},
     servings: Number,
     img: String
 }, {
