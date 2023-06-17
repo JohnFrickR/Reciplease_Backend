@@ -17,7 +17,7 @@ mongoose.connection
     .on("close", () => console.log("Your are disconnected from mongoose"))
     .on("error", (error) => console.log(error))
 
-// export the models 
+// then we need to export our models that we use in our app, currently just recipes. 
 module.exports={
-    Recipe: require("./Recipe.js")
+    Recipe: require("./recipe.js")
 }

@@ -17,7 +17,7 @@ const getRecipe = (req, res) => {
   }
 
 // Show
-// show route for the SPECIFIC recipe
+// show route for one recipe
 const showRecipe = (req,res) =>{
     db.Recipe.findById(req.params.id)
     .then((foundRecipe)=>{
@@ -30,7 +30,7 @@ const showRecipe = (req,res) =>{
 }
 
 // Create
-// This will let us create a new recipe
+// This will let us make a new recipe in our DB
 const createRecipe = (req,res) =>{
     db.Recipe.create(req.body)
     .then((createdRecipe)=>{
@@ -56,7 +56,7 @@ const updateRecipe = (req, res) =>{
 }
 
 // Delete
-// this will let us delete the recipe
+// this will let us delete a specific recipe by id
 const deleteRecipe = (req,res) => {
     db.Recipe.findByIdAndDelete(req.params.id)
     .then((deletedRecipe) => {
@@ -68,7 +68,7 @@ const deleteRecipe = (req,res) => {
     })
 }
 
-// this will export our routes/controllers
+// We need to export our controllers here below
 module.exports = {
     getRecipe,
     createRecipe,

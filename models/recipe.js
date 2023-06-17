@@ -21,7 +21,8 @@ const RecipeSchema = new mongoose.Schema({
     }
 })
 
-// now we need to create a model from our schema 
+// creating the model from our schema above. 
 const Recipe = mongoose.model("Recipe", RecipeSchema)
 
+// exporting our new model
 module.exports = Recipe

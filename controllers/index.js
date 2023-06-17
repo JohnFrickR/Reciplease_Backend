@@ -1,4 +1,4 @@
-// this is allowing us to hit the routes in the recipeCtrls.js
+// we need to export our controllers so we can hit the routes in recipeCtrls.js
 module.exports = {
     recipeCtrl: require('./recipeCtrls')
 }
